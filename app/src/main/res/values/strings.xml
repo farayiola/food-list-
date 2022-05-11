@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">foodlist</string>
+    <string name="food1">fried rice</string>
+    <string name="food1_price">$10</string>
+    <string name="food2">rice and stew</string>
+    <string name="food2_price">$15</string>
+    <string name="food3">amala</string>
+    <string name="food3_price">$9</string>
+    <string name="food4">yam and egg</string>
+    <string name="food4_price">$30</string>
+    <string name="foods">foods</string>
+    <string name="string_foods" />
+
+</resources>
