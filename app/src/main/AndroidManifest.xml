@@ -10,12 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Foodlist" >
         <activity
-            android:name="com.example.activity.DetailedActivity"
-            android:exported="false" />
-        <activity
-            android:name=".foodDes"
-            android:exported="false" />
-        <activity
             android:name="com.example.activity.MainActivity"
             android:exported="true" >
             <intent-filter>
