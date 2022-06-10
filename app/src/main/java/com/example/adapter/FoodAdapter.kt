@@ -1,6 +1,4 @@
 package com.example.adapter
-import android.content.Intent
-import android.os.Parcel
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,10 +11,8 @@ import com.example.FoodFragmentDirections
 import com.example.foodlist.R
 
 
-
 class FoodAdapter(private val foodlist: ArrayList<Food>) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
 
-    var onItemClick : ((Food) -> Unit)? = null
 
 
     class FoodViewHolder( view: View) : RecyclerView.ViewHolder(view) {
@@ -41,19 +37,9 @@ class FoodAdapter(private val foodlist: ArrayList<Food>) : RecyclerView.Adapter<
         holder.textView.text = food.name
         holder.price.text = food.price
         holder.imageView.setImageResource(food.image)
-
-
         holder.itemView.setOnClickListener{
-            val action = FoodFragmentDirections.actionFoodFragmentToDetailFragment2(food = "food")
+            val action = FoodFragmentDirections.actionFoodFragmentToDetailFragment2(food.description, food.image)
             holder.itemView.findNavController().navigate(action)
-            onItemClick?.invoke(food)
-           // val
-
-
-
-
-           // holder.
-
 
 
 
@@ -63,3 +49,4 @@ class FoodAdapter(private val foodlist: ArrayList<Food>) : RecyclerView.Adapter<
 
     override fun getItemCount() = foodlist.size
 }
+

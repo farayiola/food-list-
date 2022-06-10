@@ -1,7 +1,6 @@
 package com.example
 
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.core.content.ContextCompat
@@ -54,19 +53,6 @@ private var _binding: FragmentFoodBinding? = null  //change val to var here
         //binding adapter to the recyclerview
         foodAdapter = FoodAdapter(foodList)
         recyclerView.adapter = foodAdapter
-     foodAdapter.onItemClick = {
-         val intent = Intent(this.requireContext(), DetailFragment::class.java)
-         intent.putExtra("food", "food")
-         //activity?.supportFragmentManager
-
-        //activity?.startActivity(intent)
-       // startActivity(intent)
-
-
-
-
-
-      }
 
 
         }
